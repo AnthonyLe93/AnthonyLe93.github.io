@@ -1585,6 +1585,16 @@ input, select, textarea {
                 height: 200px;
                 object-fit: cover;
             }
+            .image.avatar {
+                float: center;
+                width:  400px;
+                height: 400px;
+                object-fit: cover;
+                margin:50px;
+                padding:50px;
+            }
+
+
 
 
 /* List */
