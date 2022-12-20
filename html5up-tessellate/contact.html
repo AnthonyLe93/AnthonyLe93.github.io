@@ -11,21 +11,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
-<div class="topnav">
-    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <a href="index.html">Home</a>
-    <a href="work.html">Work</a>
-    <a href="contact.html">Contact</a>
-    <a href="intro.html">About</a>
-    <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
-</div>
 
 <body class="is-preload">
-<!-- Fourth -->
+<div class="topnav">
+    <a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a>
+    <div class="dropdown">
+        <a><i class="fa fa-fw fa-tasks"></i>Work<i class="fa fa-caret-down"></i></a>
+        <div class="dropdown-content">
+            <a href="work.html">Overview</a>
+            <a href="flash.html">FLASH Project</a>
+            <a href="trustworthy_robots.html">TAS Project</a>
+            <a href="sofa.html">SOFA Project</a>
+            <a href="jina.html">JINA Project</a>
+            <a href="gelbot.html">GelBot Project</a>
+            <a href="tetraflex.html">Tetraflex Project</a>
+        </div>
+        </div>
+        <a href="contact.html"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+        <a href="intro.html"><i class="fa fa-fw fa-info"></i>About</a>
+        <a href="resources.html"><i class="fa fa-fw fa-folder-open"></i>Resources</a>
+        <div class="search-container">
+            <form method="get" action="https://www.google.co.uk/">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+
+<!-- Contact -->
 <section id="contact" class="main">
     <header>
         <div class="container">
@@ -80,7 +97,6 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
-<script src="assets/js/navbar_function.js"></script>
 
 
 </body>
