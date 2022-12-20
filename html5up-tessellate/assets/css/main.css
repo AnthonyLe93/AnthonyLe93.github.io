@@ -1563,6 +1563,7 @@ input, select, textarea {
 		.image.fit {
 			display: block;
 			width: 100%;
+			height: 100%;
 		}
 
 		.image.left {
@@ -2680,3 +2681,6 @@ input, select, textarea {
 
 
 
+.video {
+  object-fit: fill;
+}
