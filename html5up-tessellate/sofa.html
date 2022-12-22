@@ -24,27 +24,250 @@
             <a href="gelbot.html">GelBot Project</a>
             <a href="tetraflex.html">Tetraflex Project</a>
         </div>
-        </div>
-        <a href="contact.html"><i class="fa fa-fw fa-envelope"></i>Contact</a>
-        <a href="intro.html"><i class="fa fa-fw fa-info"></i>About</a>
-        <a href="resources.html"><i class="fa fa-fw fa-folder-open"></i>Resources</a>
-        <div class="search-container">
-            <form method="get" action="https://www.google.co.uk/">
-                <input type="text" placeholder="Search.." name="search">
-                <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div>
     </div>
+    <a href="contact.html"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+    <a href="intro.html"><i class="fa fa-fw fa-info"></i>About</a>
+    <a href="resources.html"><i class="fa fa-fw fa-folder-open"></i>Resources</a>
+    <div class="search-container">
+        <form method="get" action="https://www.google.co.uk/">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </div>
+</div>
 
-<!-- Header -->
-<section id="header" class="dark">
+<section id="header" class="main">
     <header>
         <section>
             <div class="container">
+                <h1>Calculus of Soft Trustworthiness</h1>
+            </div>
+        </section>
+        <div class="col-12-narrow">
+            <span><img src="sofa_media/calculus_soft.png" alt="" width="90%" height="90%"/></span>
+        </div>
+    </header>
+</section>
 
-                <h1>SOFA soft robot project</h1>
+<!--project description -->
+<section id="prjDesc" class="main">
+    <div class="content dark style3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12-narrow">
+                    <h3 style="text-align: left">Towards a calculus for trustworthiness & evolving functionality in soft
+                        robots</h3>
+                    <p style="font-style: italic"> Presented in TAS node in Functionality Seminar, 2022.</p>
+                    <p>Due to the inherent uncertainty in soft robot systems, it is a challenge to quantify
+                        trustworthiness in soft robots. In addition, there is not a universal definition for
+                        what constitute as a trustworthy soft robot in the field. Bear in mind these challenges I
+                        propose a
+                        universal framework to calculate Trustworthiness in Soft-robots which consists of application
+                        measures
+                        and fundamental measures.
+                        The Fundamental measures can be predictability, reliability or adaptability.
+                    </p>
+                    <p>Applications measures can be manipulation, exploration or medical.
+                        Application measures dictate the weighting for fundamental measures of trust worthiness. i.e.
+                        different application has specific requirements in terms of predictability, reliability and
+                        adaptability.
+                    </p>
+                    <p>Manipulation → focus more strongly on predictability</p>
+                    <p>Exploration → more focus on adaptability</p>
+                    <p>Medical → more focus on reliability </p>
+                    <p>We believe that Trustworthiness in soft robot is application driven. As such, I decided to
+                        explore predictability of soft gripper in manipulation application as a first function for my
+                        calculus. </p>
+                    <p>I am taking a top-down approach with an initial focus on
+                        predictability to describe and quantify trustworthiness. I also think that predictability might
+                        be
+                        inversely proportionate in certain cases to adaptability as the robot is less adaptive when
+                        predictability increase.
+                        To achieve this, I am going back to the basics of soft robotics and ask myself a question: what
+                        is
+                        the fundamental building blocks of soft robots? </p>
+                    <p>Soft robots are made of soft elements that bend, twist or extend which are the fundamental
+                        behaviour of soft robots. As such, I am looking at the buckling effect of cylindrical shapes
+                        with different cross-sectional areas (I call these simple soft elements morphels). I choose to
+                        investigate these morphels because they are simple, having a particular behaviour (bending)
+                        and offer good flexibility and control. By investigate the buckling behaviour of these morphels,
+                        I can hopefully quantify the trustworthiness of soft robots. I call this Calculus of
+                        soft trustworthiness. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--morphel-->
+<section id="morphel" class="main">
+    <header>
+        <section>
+            <div class="container">
+                <h2>Morphel Generation Process</h2>
+                <div class="row">
+                    <div class="col-12">
+                        <span class="image featured"><img src="sofa_media/morphel_design.png"></span>
+                        <p>Here is the entire morphels design process from initial sinusoidal family shapes descriptor
+                            to wall
+                            thickness calculation to 3D volumetric shapes generation and finally the end product through
+                            3D printing. </p>
+                    </div>
+                </div>
+
             </div>
         </section>
     </header>
+    <div class="content dark style1">
+        <div class="container">
+            <div class="row">
+                <div class="col-12-narrow">
+                    <h3>Morphels shape descriptor</h3>
+                    <span class="image featured"><img src="sofa_media/shape_family.png"></span>
+                    <p>Regarding the morphels design, I have developed a function to describe a sinusoidal family
+                        of shapes. This function takes perfect circle as their root, and by varying number of
+                        waveforms and the magnitude of the wave amplitude, I am able to generate a range of
+                        sinusoidal shapes which could output interesting buckling behaviors.
+                        To be able to generate the 3D volumetric shape of these morphels, I gave these shapes
+                        a wall thickness of 1mm.</p>
+                    <footer>
+                        <a href="resources/shape_descriptor.m" class="button scrolly">Checkout the matlab code</a>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content dark style2">
+        <div class="container">
+            <div class="row">
+                <div class="col-12-narrow">
+                    <h3>Morphels Gmsh</h3>
+                    <span class="image featured"><img src="sofa_media/shape_family_gmsh.png"></span>
+                    <p>Here is the 3D volumetric shapes generated by gmsh for the above sinusoidal shape family.</p>
+                    <footer>
+                        <a href="resources/gmsh_shape_3d.py" class="button scrolly">Checkout the python code</a>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content dark style3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12-narrow">
+                    <h3>Buckling Direction</h3>
+                    <span class="image featured"><img src="sofa_media/sofa_sim_setup.png"></span>
+                    <p>This plot is showing you the average end position of the buckling of the shape depending on
+                        which bias force is acting on it. Note that the colour curves are just representation of the
+                        shape not the actual cross-sectional area of the buckled shape. It is clear from the plot that
+                        the buckling happens at the principal axes of the shape (represent by black dotted lines) under
+                        the influence of the bias forces. This is what we normally expect. However, this behaviour is
+                        not quite true as the vertices and amplitude increase. I will clarify this point in the
+                        next slide. </p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
+
+<!-- sofaSim -->
+<section id="sofaSim" class="main">
+    <div class="content dark style2">
+        <div class="container">
+            <h3>SOFA Simulation</h3>
+            <span class="image featured"><img src="sofa_media/sofa_sim.gif" alt=""/></span>
+            <div class="row">
+                <div class="col-12-narrow">
+                    <p>I decided to use SOFA because SOFA can batch process thousands of
+                        possible scenarios. It is a powerful simulation tool to quickly narrow the massive search
+                        space and focus on important geometries. This is a SOFA simulation set-up for the pentafoil
+                        shape.</p>
+                    <p>This particular shape has 5 vertices and the sinusoidal amplitude applied on the shape is 5mm.
+                        The shape is fixed at one end and an axial displacement (z-axis direction) of 20mm is applied
+                        to the other end to simulation compression force.</p>
+                    <p>The red boxes are called region of interests or ROI boxes. They are used to applied constraint
+                        and/or monitor the mechanical behaviour of the elements trapped within the region of interest
+                        boxes. I used the red box in the middle to track the displacements of all the elements within
+                        it because the buckling tend to happen at the middle of the cylinder.</p>
+                    <p>The simulation time step is 0.1s which correspond to a displacement of 0.1mm. Currently, a
+                        set of 4 simulation is run for each scenario, each simulation a small bias force of 100mN is
+                        applied to all the elements within the middle ROI box to replicate imperfections cause the
+                        fabrication process in real life. The bias forces are applied in plus, minus x and y
+                        directions. </p>
+                </div>
+            </div>
+            <footer>
+                <p>Check out my github repository for more information</p>
+                <a href="https://github.com/AnthonyLe93/SofaSoftRobot_TAS"
+                   class="icon brands fa-github button scrolly">
+                    Github
+                </a>
+            </footer>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- sofaSim -->
+<section id="sofaSimResult" class="main">
+    <div class="content dark style2">
+        <div class="container">
+            <h3>SOFA Simulation Results</h3>
+            <span class="image featured"><img src="sofa_media/sofa_sim_result.png" alt=""/></span>
+            <div class="row">
+                <div class="col-12-narrow">
+                    <p>Here is the buckling plot of all simulated shapes. As you can see, at low vertices and
+                        amplitudes the buckling tend to happen at the principal axes of the shapes. As can be
+                        seen in the dotted green box, depending on the bias forces applied, the shape would buckle
+                        up or down. However, as the vertices and amplitude increase, the buckling direction becomes
+                        more and more independent from the bias forces applied. We can see from this dotted red box,
+                        all the buckling tend to happen at the same orientation.</p>
+                    <p>Bellow is a test rig build to validate the buckling behaviour of the simulated shapes. The results
+                    collected from the test rig seems to agree with the simulation results.</p>
+
+                </div>
+
+                <div class="col-12-narrow">
+                    <span class="image featured">
+                        <video width="100%" height="100%" controls autoplay muted loop>
+                            <source src="sofa_media/Ellipse_axial_test.mp4" type="video/mp4">
+                        </video>
+                    </span>
+
+                </div>
+            </div>
+        </div>
+</section>
+
+<!-- Footer -->
+<section id="footer">
+    <ul class="icons">
+        <li><a href="https://www.facebook.com/NguyenHaoLe93" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a>
+        </li>
+        <li><a href="https://www.instagram.com/le.anthony1993/" class="icon brands fa-instagram"><span class="label">Instagram</span></a>
+        </li>
+        <li><a href="https://www.linkedin.com/in/anthony-le-516a77104/" class="icon brands fa-linkedin"><span
+                class="label">LinkedIn</span></a></li>
+        <li><a href="https://github.com/AnthonyLe93" class="icon brands fa-github"><span class="label">GitHub</span></a>
+        </li>
+    </ul>
+    <div class="copyright">
+        <ul class="menu">
+            <li>&copy; Anthony Le. All rights reserved.</li>
+            <li><a href="term_of_use.html"> Terms of use </a></li>
+        </ul>
+    </div>
+</section>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/navbar_function.js"></script>
 </body>
+</html>
