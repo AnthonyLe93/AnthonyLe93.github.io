@@ -2530,10 +2530,14 @@ input, select, textarea {
             margin: 0;
             padding: 14px;
           }
+
         .topnav input[type=text] {
             border: 1px solid #ccc;
-  }
+        }
 
+        .video {
+          object-fit: fill;
+        }
 
     }
 
@@ -2629,21 +2633,25 @@ input, select, textarea {
 
 .topnav a .dropdown {
       float: left;
-      color: #f2f2f2;
+      color: inherit;
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
       font-size: 17px;
     }
 
+    /* Dropdown Button */
+
 .topnav .dropdown .dropbtn {
   font-size: 17px;
   border: none;
   outline: none;
-  color: white;
+  color: #f9f9f9;
   background-color: inherit;
   font-family: inherit;
   margin: 0;
+  padding: 14px 1px;
+  cursor: pointer;
 }
 
 .topnav .dropdown-content {
