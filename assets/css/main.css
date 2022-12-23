@@ -1588,8 +1588,8 @@ input, select, textarea {
             }
             .image.avatar {
                 float: center;
-                width:  400px;
-                height: 400px;
+                width:  50%;
+                height: 50%;
                 object-fit: cover;
                 margin:50px;
                 padding:50px;
