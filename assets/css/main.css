@@ -2589,6 +2589,7 @@ input, select, textarea {
             object-fit: cover;
         }
 
+
     }
 
     /*-----------------------------------*/
@@ -2754,12 +2755,11 @@ input, select, textarea {
        position: absolute;
        left: 15%;
        right: 15%;
-
        z-index: 15;
        padding-top: 20%;
        padding-bottom: 20%;
        text-align: center;
-       font-size: 40px
+       font-size: 250%;
     }
 
     form {
