@@ -1,2 +1,4 @@
 *.DS_Store
-test.html
+client/test.html
+.env
+node_modules

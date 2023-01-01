@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Anthony-Chat-gpt</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="style.css">
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<div class="topnav" id="myTopnav">
+    <a href="../index.html" class="active"><i class="fa fa-fw fa-home"></i>Home</a>
+    <a href="../work.html"><i class="fa fa-fw fa-tasks"></i>Work</a>
+    <a href="../contact.html"><i class="fa fa-fw fa-envelope"></i>Contact</a>
+    <a href="../intro.html"><i class="fa fa-fw fa-info"></i>About</a>
+    <a href="../resources.html"><i class="fa fa-fw fa-folder-open"></i>Resources</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+
+<div id="app">
+    <header>
+        <h1>Wellcome to Chat GPT-3 </h1>
+    </header>
+</div>
+<div id="chat_container"></div>
+<form>
+    <textarea name="prompt" rows="1" cols="1" placeholder="Ask anything..."></textarea>
+    <button type="submit"><img src="assets/send.svg"></button>
+</form>
+
+<script type="module" src="scripts.js"></script>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
+</script>
+
+
+</body>
+</html>
