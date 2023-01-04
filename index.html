@@ -16,18 +16,19 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="assets/css/topnav.css"/>
 
 </head>
 
 
-<body>
-<div class="topnav">
-    <a href="index.html"><i class="fa fa-fw fa-home"></i>Home</a>
+<body class="is-preload">
+
+<div class="topnav" id="myTopnav">
+    <a href="index.html" class="active"><i class="fa fa-fw fa-home"></i>Home</a>
     <div class="dropdown">
-        <a href="#"><i class="fa fa-fw fa-tasks"></i>Work</a>
-
-        <button class="dropbtn"><i class="fa fa-caret-down"></i></button>
-
+        <button class="dropbtn">
+            <i class="fa fa-fw fa-tasks"></i>Work<i class="fa fa-caret-down"></i>
+        </button>
         <div class="dropdown-content">
             <a href="work.html">Overview</a>
             <a href="flash.html">FLASH Project</a>
@@ -44,23 +45,13 @@
     <a href="https://chatgpt-omega-eight.vercel.app/"><i class="fa fa-android"></i>Chatbot</a>
     <a href="resources.html"><i class="fa fa-fw fa-folder-open"></i>Resources</a>
     <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
-    <div class="search-container">
-        <form method="get" action="https://www.google.co.uk/">
-            <input type="text" placeholder="Search.." name="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
-            <!-- Create a container for the search results -->
-            <div id="search-results"></div>
-        </form>
-    </div>
 </div>
 
 
 <!-- Header -->
 <section id="header" class="dark">
-
     <header>
         <section>
-
             <div id="anthony" class="container">
                 <a class="image avatar">
                     <img src="images/Anthony.jpg">
@@ -119,47 +110,6 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
-<script>
-    // Get the search bar and search button elements
-    const searchBar = document.getElementById('search-bar');
-    const searchButton = document.getElementById('search-button');
-    const searchResults = document.getElementById('search-results');
-
-    // Add an event listener to the search button
-    searchButton.addEventListener('click', () => {
-      // Clear any previous search results
-      searchResults.innerHTML = '';
-
-      // Get the search term
-      const searchTerm = searchBar.value.toLowerCase();
-
-      // Get all the elements on the page
-      const elements = document.getElementsByTagName('*');
-
-      // Search through the elements and look for the search term
-      for (let i = 0; i < elements.length; i++) {
-        const element = elements[i];
-
-        // Check if the element contains the search term
-        if (element.textContent.toLowerCase().includes(searchTerm)) {
-          // Create a search result element
-          const result = document.createElement('div');
-          result.className = 'search-result';
-          result.textContent = element.textContent;
-
-          // Add a click event listener to the search result element
-          result.addEventListener('click', () => {
-            // Scroll to the element when the search result is clicked
-            element.scrollIntoView();
-          });
-
-          // Add the search result to the search results container
-          searchResults.appendChild(result);
-        }
-      }
-    });
-
-</script>
-
+<script src="assets/js/topnav.js"></script>
 </body>
 </html>
