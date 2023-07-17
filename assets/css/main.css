@@ -1590,7 +1590,7 @@ bdt{
                 object-fit: cover;
             }
             .image.avatar {
-                float: center;
+                float: none;
                 width:  60%;
                 height: 60%;
                 object-fit: cover;
@@ -2183,7 +2183,7 @@ bdt{
 		}
 
 		.icon:before {
-			line-height: inhreit;
+			line-height: inherit;
 		}
 
 		.icon > .label {
@@ -2562,14 +2562,15 @@ bdt{
 
 
        .carousel-caption {
-       position: absolute;
-       left: 15%;
-       right: 15%;
-       z-index: 15;
-       padding-top: 50%;
-       padding-bottom: 20%;
-       text-align: center;
-       font-size: 200%;
+		   position: absolute;
+		   left: 15%;
+		   right: 15%;
+		   z-index: 15;
+		   padding-top: 50%;
+		   padding-bottom: 20%;
+		   text-align: center;
+		   font-size: 200%;
+	   }
     }
 
 
